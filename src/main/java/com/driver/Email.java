@@ -39,11 +39,11 @@ public class Email {
                 boolean special_charater=false;
                 for(int i=0;i<newPassword.length();i++){
                     char ch=newPassword.charAt(i);
-                    if(ch>=65||ch<=90){             // 2. It contains at least one uppercase letter
+                    if(ch>=65&&ch<=90){             // 2. It contains at least one uppercase letter
                         Upper_letter=true;
-                    }else if(ch>=97||ch<=122){      // 3. It contains at least one lowercase letter
+                    }else if(ch>=97&&ch<=122){      // 3. It contains at least one lowercase letter
                         Lower_letter=true;
-                    }else if(ch>=48||ch<=57){       // 4. It contains at least one digit
+                    }else if(ch>='0'&&ch<='9'){       // 4. It contains at least one digit
                         Digits=true;
                     }else
                         special_charater=true;      // 5. It contains at least one special character. Any character apart from alphabets and digits is a special character
